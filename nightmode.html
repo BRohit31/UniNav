@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Home | Uni-Navigator</title>
+<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+<script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
+<!--Bootstrap links-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<!--Bootstrap icons-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<style>
+  body{
+    margin:0; 
+    padding:0; 
+  }
+  
+  #map{
+   height: 100vh;
+   width: 100%;
+  
+  }
+
+  nav{
+    padding: 60px;
+    background-color: #a1b8be;
+    z-index: 1;
+  }
+  .b{
+    float: right;
+    top: 100%;
+    position :relative;
+    z-index: 1;
+  }
+</style>
+</head>
+<body>
+
+  <!-- NavBar -->
+  <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
+    <div class="container">
+      <a href="#" class="navbar-brand">
+      <img src="icons/logo.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
+      Jadavpur University
+      </a>
+
+      <button 
+          class="navbar-toggler" 
+          type="button" 
+          data-bs-toggle="collapse" 
+          data-bs-target="#navmenu"
+      >
+      <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navmenu">
+      <div class="navbar-nav">
+          <a class="nav-link" href="home.html">Map</a>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="exploreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Explore
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="exploreDropdown">
+                  <li><a class="dropdown-item" href="dept.html">Departments</a></li>
+                  <li><a class="dropdown-item" href="canteen.html">Canteens</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="nightmode.html">Night Walking</a></li>
+              </ul>
+          </li>
+      </div>
+          <div class="navbar-nav ms-auto">
+              <a href="#contact" class="nav-link">Contact</a>
+              <a href="#" class="nav-link">Login</a>
+          </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container z-index-1" >
+      <div class="card bg-light"></div>
+  </div>
+  <!--For Map-->
+<main>
+    <div id="map"></div>
+</main>
+  <!--JS file, for working-->
+  <script src="nightmode.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!--Footer-->
+<footer class="p-5 bg-light position-relative">
+<section id="contact">
+    <div class="container">
+          <center>
+            <div class="align-content-center pb-2">
+              <img src="icons/logo.png" height="30" width="30" class="d-inline-block align-text-center"> UniNav &copy; PentaNoobs, 2021
+            </div>
+            <div>
+              <a href="#"  style="color: #000000; text-decoration: none;"><i class="bi bi-envelope"></i>&nbsp;</a>
+              <a href="#"  style="color: #000000; text-decoration: none;"><i class="bi bi-facebook"></i>&nbsp;</a>
+              <a href="#"  style="color: #000000; text-decoration: none;"><i class="bi bi-twitter"></i>&nbsp;</a>
+              <a href="#"  style="color: #000000; text-decoration: none;"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </center>
+      </div>
+</section>
+</footer>
+
+</body>
+</html>
